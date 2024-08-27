@@ -1,0 +1,15 @@
+.todoCounter{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+    color: orange;
+    height: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.todoCounter span{
+    font-weight: bold;
+}

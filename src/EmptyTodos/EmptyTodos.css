@@ -1,0 +1,30 @@
+/* From Uiverse.io by Javierrocadev */
+.card {
+    width: 150px;
+    height: 150px;
+    background: #a53c3c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    color: aliceblue;
+    transition: all .5s ease-in-out;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.text {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 75px 75px 5px -20px #bf5e37, -75px 75px 5px -20px #d08432, -75px -75px 5px -20px #bf5e37, 75px -75px 5px -20px #d08432;
+    transform: rotate(-45deg);
+}
+
+.card:hover .text {
+    transform: rotate(45deg);
+}

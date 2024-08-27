@@ -1,0 +1,23 @@
+.todoItem {
+    background-color:rgb(245, 213, 108);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    color: rgb(22, 22, 22);
+    border-radius: 50px;
+
+}
+
+.todoItem-p {
+    margin: 24px 0 24px 50px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.todoItem-p--complete {
+    text-decoration:line-through;
+}

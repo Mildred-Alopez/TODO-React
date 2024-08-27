@@ -1,0 +1,66 @@
+.createTodoButton {
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgb(97, 218, 250, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    transform: rotate(0);
+    transition: .3s ease;
+    z-index: 2;
+}
+
+.createTodoButton:hover {
+    transform: rotate(225deg);
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255, 255, 0, 0.185);
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 35%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.deco{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: -30px;
+    background-color: rgba(128, 128, 128, 0.623);
+    border-radius: 20%;
+}
+
+.input {
+    width: 400px;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.btns {
+    width: 70px;
+    height: 50px;
+    color: crimson;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.btncontainer{
+    margin-left: 30%;
+}
