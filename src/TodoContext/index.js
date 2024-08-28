@@ -17,7 +17,7 @@ function TodoProvider({ children }) {
     const abrirModal = () => {
         setOpenModal(!openModal)
     }
-
+    
     const searchedTodos = todos.filter(
         (todo) => {
             const todoText = todo.text.toLowerCase()
@@ -41,16 +41,20 @@ function TodoProvider({ children }) {
     }
     const addTodo = (text) => {
         const newTodos = [...todos]
-        newTodos.push(
-            {
-                id: contador + 1,
-                text,
-                completed: false,
-                likes: 0
-            }
-        )
-        saveContador(contador + 1)
-        saveTodos(newTodos)
+        if (text === '') {
+            return ''
+        } else {
+            newTodos.push(
+                {
+                    id: contador + 1,
+                    text,
+                    completed: false,
+                    likes: 0
+                }
+            )
+            saveContador(contador + 1)
+            saveTodos(newTodos)
+        }
     }
     const completeTodo = (id) => {
         const newTodos = [...todos]
@@ -68,6 +72,8 @@ function TodoProvider({ children }) {
         newTodos.splice(todoIndex, 1)
         saveTodos(newTodos)
     }
+
+    
     return (
         <TodoContext.Provider value={{
             loading,
