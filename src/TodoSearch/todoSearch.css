@@ -11,6 +11,7 @@
     font-weight: 400;
     color: #b9b9f1;
     box-shadow: 0px 5px 50px rgba(158, 252, 220, 0.25);
+    z-index: 3;
 }
 
 .todoSearch::placeholder{

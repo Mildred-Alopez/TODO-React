@@ -4,9 +4,9 @@ import '../EmptyTodos/EmptyTodos.css'
 function EmptyTodos() {
     return (
         <div className="card">
-            <span className="text">Crea tu <br/> primer TODO</span>
+            <span className="text">Crea tu <br /> primer TODO</span>
         </div>
-
+    
     )
 }
 

@@ -9,6 +9,9 @@ function TodoProvider({ children }) {
     const { item: contador, saveItem: saveContador } = useLocalStorage('CONTADOR_V1', 0)
 
     const [searchValue, setSearchValue] = React.useState('')
+    const [id, setId] = React.useState()
+    const [newTodoValue, setNewTodoValue] = useState('')
+
     const completedTodos = todos.filter(todo => todo.completed).length
     const totalTodos = todos.length
 
@@ -17,7 +20,7 @@ function TodoProvider({ children }) {
     const abrirModal = () => {
         setOpenModal(!openModal)
     }
-    
+
     const searchedTodos = todos.filter(
         (todo) => {
             const todoText = todo.text.toLowerCase()
@@ -73,7 +76,30 @@ function TodoProvider({ children }) {
         saveTodos(newTodos)
     }
 
-    
+    const Update = (id, text) => {
+        const newTodos = [...todos]
+        if (text == '') {
+            return ''
+        } else {
+            const todoIndex = newTodos.findIndex(
+                (todo) => todo.id === id
+            )
+            newTodos[todoIndex].text = text
+            saveTodos(newTodos)
+        }
+
+    }
+
+    const Edit = (id) => {
+        setOpenModal(true)
+        setId(id)
+        const newTodos = [...todos]
+        const todoIndex = newTodos.findIndex((todo) =>
+            todo.id === id
+        )
+        setNewTodoValue(newTodos[todoIndex].text)
+    }
+
     return (
         <TodoContext.Provider value={{
             loading,
@@ -91,6 +117,12 @@ function TodoProvider({ children }) {
             openModal,
             setOpenModal,
             abrirModal,
+            newTodoValue,
+            setNewTodoValue,
+            Edit,
+            id,
+            setId,
+            Update,
         }}>
             {children}
         </TodoContext.Provider>

@@ -22,7 +22,8 @@ function AppUI() {
         aumentarLike,
         disminuirLike,
         openModal,
-        totalTodos
+        totalTodos,
+        Edit
     } = React.useContext(TodoContext)
     return (
         <>
@@ -43,7 +44,7 @@ function AppUI() {
                         likes={todo.likes}
                         onAumentarLike={() => aumentarLike(todo.id)}
                         onDisminuirLike={() => disminuirLike(todo.id)}
-                        editarText={todo.text} />
+                        onEdit={(() => Edit(todo.id))}/>
                 ))}
             </TodoList>
             <CreateTodoButton />
